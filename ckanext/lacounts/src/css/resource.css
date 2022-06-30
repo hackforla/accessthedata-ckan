@@ -3,7 +3,7 @@
     @media (--small-only) {
       float: none;
     }
-    
+
     & .btn {
       font-size: var(--font-size-small);
     }
