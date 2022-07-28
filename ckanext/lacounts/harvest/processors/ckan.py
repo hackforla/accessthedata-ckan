@@ -1,5 +1,5 @@
 import logging
-from urlparse import urljoin
+from urllib.parse import urljoin
 from operator import itemgetter
 from ckanext.lacounts.harvest import helpers
 log = logging.getLogger(__name__)

@@ -2,7 +2,7 @@
 import sys
 import urllib
 import json
-from urlparse import urlparse
+from urllib.parse import urlparse
 
 import requests
 import ckanapi

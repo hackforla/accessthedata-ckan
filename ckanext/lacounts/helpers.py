@@ -1,7 +1,7 @@
 import json
 import urllib
 import logging
-import urlparse
+from urllib.parse import urlparse
 import hashlib
 import datetime
 from ckan import model

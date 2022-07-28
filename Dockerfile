@@ -2,6 +2,8 @@ FROM openknowledge/ckan-base:2.9
 
 MAINTAINER Open Knowledge International <info@okfn.org>
 
+RUN apk add tzdata
+
 # Install utilities
 RUN pip install ipdb ipdbplugin
 
@@ -30,7 +32,7 @@ RUN echo 'Installing extensions' && \
     # showcase
     pip install -e git+https://github.com/okfn/ckanext-showcase.git#egg=ckanext-showcase && \
     # geoview
-    pip install -e git+https://github.com/okfn/ckanext-geoview.git#egg=ckanext-geoview && \
+    pip install -e git+https://github.com/ckan/ckanext-geoview.git@v0.0.20#egg=ckanext-geoview && \
     # pdfview
     pip install -e git+https://github.com/okfn/ckanext-pdfview.git#egg=ckanext-pdfview  && \
     # contact
