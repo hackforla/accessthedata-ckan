@@ -70,6 +70,32 @@ let
     doCheck = false;
   };
 
+  pytest-ckan = with python38'.pkgs; buildPythonPackage rec {
+    pname = "pytest-ckan";
+    version = "0.0.12";
+
+    src = fetchPypi {
+      inherit pname version;
+      sha256 = "sha256-HooZ0SqlALPlj9ga0S5zM71elQVU8wvITEWlCka5QoI=";
+    };
+    propagatedBuildInputs = [];
+    doCheck = false;
+  };
+
+  textblob = with python38'.pkgs; buildPythonPackage rec {
+    pname = "textblob";
+    version = "0.15.2";
+
+    src = fetchPypi {
+      inherit pname version;
+      sha256 = "sha256-V08wvmilr8yfDM+tCIOUgzNDphHE8KIEc2IuB8AsrA8=";
+    };
+    propagatedBuildInputs = [
+      nltk
+    ];
+    doCheck = false;
+  };
+
   fanstatic = with python38'.pkgs; buildPythonPackage rec {
     pname = "fanstatic";
     version = "1.2";
@@ -258,26 +284,41 @@ let
       werkzeug #[watchdog]
       wrapt
       zipp
-      zope-interface
+      #zope-interface
     ];
 
     doCheck = false;
   };
 
+  app = with python38'.pkgs; buildPythonPackage {
+    pname = "accessthedata-ckan";
+    version = "0.1";
+
+    propagatedBuildInputs = [
+      pytest
+      pytest-factoryboy
+      mock
+      routes
+      repoze_who
+      inflect
+      textblob
+
+      fanstatic
+      ckan
+      ckantoolkit
+    ];
+
+    src = ./.;
+
+    doCheck = false;
+  };
+
 in
-pkgs.mkShell rec {
-  buildInputs = with pkgs; [
-    python38Packages.nose
-    python38Packages.setuptools
-    python38Packages.pytest
-    python38Packages.pytest-factoryboy
-    python38Packages.mock
-    python38Packages.routes
-    python38Packages.repoze_who
-    fanstatic
-    ckan
-    ckantoolkit
-  ] ++ [
-    (pyenv.override {})
-  ];
-}
+  pkgs.mkShell {
+    buildInputs = with python38'.pkgs; [
+      app
+
+      nose
+      setuptools
+    ];
+  }
