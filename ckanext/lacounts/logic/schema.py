@@ -11,10 +11,10 @@ natural_number_validator = toolkit.get_validator('natural_number_validator')
 
 def event_base_schema():
     schema = {
-        'name': [not_empty, unicode],
-        'description': [ignore_missing, unicode],
-        'url': [ignore_missing, unicode],
-        'location': [ignore_missing, unicode],
+        'name': [not_empty, str],
+        'description': [ignore_missing, str],
+        'url': [ignore_missing, str],
+        'location': [ignore_missing, str],
         'date': [not_empty, isodate],
         'free': [not_empty, boolean_validator],
         'topic_tags': [ignore_missing, list_of_strings]
@@ -32,11 +32,11 @@ def event_create_schema():
 
 def event_update_schema():
     schema = {
-        'id': [not_empty, unicode],
-        'description': [ignore_missing, unicode],
-        'name': [not_empty, unicode],
-        'url': [ignore_missing, unicode],
-        'location': [ignore_missing, unicode],
+        'id': [not_empty, str],
+        'description': [ignore_missing, str],
+        'name': [not_empty, str],
+        'url': [ignore_missing, str],
+        'location': [ignore_missing, str],
         'date': [not_empty, isodate],
         'free': [not_empty, boolean_validator],
         'topic_tags': [ignore_missing, list_of_strings]
@@ -46,14 +46,14 @@ def event_update_schema():
 
 def event_delete_schema():
     schema = {
-        'id': [not_empty, unicode]
+        'id': [not_empty, str]
     }
     return schema
 
 
 def event_show_schema():
     schema = {
-        'id': [not_empty, unicode]
+        'id': [not_empty, str]
     }
     return schema
 
@@ -68,11 +68,11 @@ def event_list_schema():
 
 def volunteering_base_schema():
     schema = {
-        'organization': [not_empty, unicode],
-        'url': [ignore_missing, unicode],
-        'description': [ignore_missing, unicode],
-        'email': [ignore_missing, unicode],
-        'email_contact': [ignore_missing, unicode],
+        'organization': [not_empty, str],
+        'url': [ignore_missing, str],
+        'description': [ignore_missing, str],
+        'email': [ignore_missing, str],
+        'email_contact': [ignore_missing, str],
         'topic_tags': [ignore_missing, list_of_strings],
         'created_on': [ignore_missing, isodate],
         'is_filled': [not_empty, boolean_validator]
@@ -90,12 +90,12 @@ def volunteering_create_schema():
 
 def volunteering_update_schema():
     schema = {
-        'id': [not_empty, unicode],
-        'organization': [not_empty, unicode],
-        'url': [ignore_missing, unicode],
-        'description': [ignore_missing, unicode],
-        'email': [ignore_missing, unicode],
-        'email_contact': [ignore_missing, unicode],
+        'id': [not_empty, str],
+        'organization': [not_empty, str],
+        'url': [ignore_missing, str],
+        'description': [ignore_missing, str],
+        'email': [ignore_missing, str],
+        'email_contact': [ignore_missing, str],
         'topic_tags': [ignore_missing, list_of_strings],
         'created_on': [ignore_missing, isodate],
         'is_filled': [not_empty, boolean_validator]
@@ -113,14 +113,14 @@ def volunteering_list_schema():
 
 def volunteering_delete_schema():
     schema = {
-        'id': [not_empty, unicode]
+        'id': [not_empty, str]
     }
     return schema
 
 
 def volunteering_show_schema():
     schema = {
-        'id': [not_empty, unicode]
+        'id': [not_empty, str]
     }
     return schema
 

@@ -1,8 +1,8 @@
 import os
 import csv
-import urllib
+import urllib.request, urllib.parse, urllib.error
 import collections
-import StringIO
+import io
 
 
 from ckan.plugins import toolkit
@@ -18,12 +18,12 @@ def _link(url, text):
 
 def _search_url(params):
     qs = []
-    for key in params.keys():
+    for key in list(params.keys()):
         qs.append('{}:"{}"'.format(key, params[key]))
 
     qs = ' AND '.join(qs)
 
-    return '{}/dataset?{}'.format(BASE_URL, urllib.urlencode({'q': qs}))
+    return '{}/dataset?{}'.format(BASE_URL, urllib.parse.urlencode({'q': qs}))
 
 
 def create_topics_csv():
@@ -71,12 +71,12 @@ def create_topics_csv():
                     break
 
     rows = []
-    for term, row in terms.iteritems():
+    for term, row in terms.items():
         # Add link to global count
         row['count'] = _link(_search_url({'tags': row['term']}), row['count'])
         rows.append(row)
 
-    f = StringIO.StringIO()
+    f = io.StringIO()
     writer = csv.DictWriter(f, fieldnames=headers)
     writer.writeheader()
     writer.writerows(rows)

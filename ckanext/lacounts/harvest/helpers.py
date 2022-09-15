@@ -17,7 +17,7 @@ def process_package(package, existing_package, harvest_object):
 
 def map_package(package, mapping):
     # mapping: in form of `{'lacounts_field_name: ['key_1', 'key_2', ...], ...}`
-    for field_name, keys in mapping.items():
+    for field_name, keys in list(mapping.items()):
         for key in keys:
             # General
             value = package.get(key)

@@ -30,8 +30,8 @@ def ckan_processor(package, existing_package, harvest_object):
 
     # Terms
     terms = []
-    terms.extend(map(itemgetter('name'), package.get('tags', [])))
-    terms.extend(map(itemgetter('name'), package.get('groups', [])))
+    terms.extend(list(map(itemgetter('name'), package.get('tags', []))))
+    terms.extend(list(map(itemgetter('name'), package.get('groups', []))))
     package['harvest_dataset_terms'] = terms
 
     return package

@@ -17,7 +17,7 @@ log = logging.getLogger(__name__)
 
 
 def make_uuid():
-    return unicode(uuid.uuid4())
+    return str(uuid.uuid4())
 
 
 Base = declarative_base(metadata=metadata)
@@ -84,7 +84,7 @@ class LACountsBaseModel(object):
 
 
 class Event(LACountsBaseModel, Base):
-    __tablename__ = u'event'
+    __tablename__ = 'event'
 
     id = Column(Unicode, primary_key=True, default=make_uuid)
     name = Column(Unicode, nullable=False)
@@ -97,7 +97,7 @@ class Event(LACountsBaseModel, Base):
 
 
 class VolunteeringOpportunity(LACountsBaseModel, Base):
-    __tablename__ = u'volunteering_opportunity'
+    __tablename__ = 'volunteering_opportunity'
 
     id = Column(Unicode, primary_key=True, default=make_uuid)
     organization = Column(Unicode, nullable=False, default='')
@@ -114,7 +114,7 @@ def create_tables():
     Event.__table__.create()
     VolunteeringOpportunity.__table__.create()
 
-    log.info(u'Get Involved database tables created')
+    log.info('Get Involved database tables created')
 
 
 def tables_exist():

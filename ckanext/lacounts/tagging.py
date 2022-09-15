@@ -57,7 +57,7 @@ def extract_terms_from_text(text):
 
 
 def normalize_terms(terms):
-    return map(_normalize_term, terms)
+    return list(map(_normalize_term, terms))
 
 
 # Internal

@@ -1,7 +1,7 @@
 import json
-import urllib
+import urllib.request, urllib.parse, urllib.error
 import logging
-from urllib.parse import urlparse
+import urllib.parse as urlparse
 import hashlib
 import datetime
 from ckan import model
@@ -65,7 +65,7 @@ def get_groups_for_form(selected_groups=[]):
     })
 
     # Mark selected
-    selected_names = map(lambda group: group['name'], selected_groups)
+    selected_names = [group['name'] for group in selected_groups]
     for group in groups:
         if group['name'] in selected_names:
             group['selected'] = 'selected'
@@ -349,24 +349,24 @@ def update_url_query(url, params):
     url_parts = list(urlparse.urlparse(url))
     query = dict(urlparse.parse_qsl(url_parts[4]))
     query.update(params)
-    query = dict((k,v) for k,v in query.iteritems() if v is not None)
-    url_parts[4] = urllib.urlencode(query)
+    query = dict((k,v) for k,v in query.items() if v is not None)
+    url_parts[4] = urllib.parse.urlencode(query)
     return urlparse.urlunparse(url_parts)
 
 
 def get_rounded_value(value):
 
-    if isinstance(value, basestring):
+    if isinstance(value, str):
         value = float(value)
 
-    return unicode(round(value, 3))
+    return str(round(value, 3))
 
 
 def get_spatial_value(pkg_dict):
     text = pkg_dict.get('spatial_text')
     coords = geojson = None
     if pkg_dict.get('spatial'):
-        if isinstance(pkg_dict['spatial'], basestring):
+        if isinstance(pkg_dict['spatial'], str):
             try:
                 geojson = json.loads(pkg_dict['spatial'])
             except ValueError:
@@ -597,7 +597,7 @@ def get_query_param(name, default=None):
 
 def format_iso_date_string(string, format):
     try:
-        return datetime.date(*map(int, string.split('-'))).strftime(format)
+        return datetime.date(*list(map(int, string.split('-')))).strftime(format)
     except Exception as exception:
         log.exception(exception)
         return string

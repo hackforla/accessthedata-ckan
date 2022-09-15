@@ -30,13 +30,13 @@ class LacountsPlugin(plugins.SingletonPlugin, DefaultTranslation):
 
     def update_config(self, config_):
         if not tables_exist():
-            log.critical(u'''
+            log.critical('''
 The lacounts extension requires database initialization. Please run the
 following to create the database tables:
     paster --plugin=ckanext-lacounts get_involved init-db
 ''')
         else:
-            log.debug(u'LA Counts "Get Involved" tables exist')
+            log.debug('LA Counts "Get Involved" tables exist')
 
         toolkit.add_template_directory(config_, 'templates')
         toolkit.add_public_directory(config_, 'public')

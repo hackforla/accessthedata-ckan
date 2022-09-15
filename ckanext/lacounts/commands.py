@@ -8,7 +8,7 @@ import ckanapi
 
 
 class GetInvolved(toolkit.CkanCommand):
-    u'''Utilities for administrating the Get Involved pages (events and volunteering).
+    '''Utilities for administrating the Get Involved pages (events and volunteering).
 
     Usage:
         paster get_involved init-db
@@ -34,9 +34,9 @@ class GetInvolved(toolkit.CkanCommand):
     def init_db(self):
 
         if tables_exist():
-            print(u'Get Involved tables already exist')
+            print('Get Involved tables already exist')
             sys.exit(1)
 
         create_tables()
 
-        print(u'Get Involved tables created')
+        print('Get Involved tables created')

@@ -174,7 +174,7 @@ def event_update(context, data_dict):
 
     ignored_keys = ['id']
 
-    for k, v in data_dict.items():
+    for k, v in list(data_dict.items()):
         if k not in ignored_keys:
             setattr(event, k, v)
 
@@ -196,7 +196,7 @@ def volunteering_update(context, data_dict):
 
     ignored_keys = ['id']
 
-    for k, v in data_dict.items():
+    for k, v in list(data_dict.items()):
         if k not in ignored_keys:
             setattr(volunteering, k, v)
 

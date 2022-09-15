@@ -17,7 +17,7 @@ def socrata_processor(package, existing_package, harvest_object):
 
     # Terms
     terms = []
-    terms.extend(map(itemgetter('name'), package.get('tags', [])))
+    terms.extend(list(map(itemgetter('name'), package.get('tags', []))))
     for item in package.get('extras', []):
         if item.get('key') == 'categories':
             terms.extend(item.get('value', []))

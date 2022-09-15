@@ -13,7 +13,7 @@ def esri_geoportal_processor(package, existing_package, harvest_object):
     # Spatial
     coordinates = _get_coordinates(package)
     try:
-        min_x, min_y, max_x, max_y = map(float, coordinates)
+        min_x, min_y, max_x, max_y = list(map(float, coordinates))
         package['spatial'] = {
             'type': 'Polygon',
             'coordinates': [
@@ -32,7 +32,7 @@ def esri_geoportal_processor(package, existing_package, harvest_object):
 
     # Terms
     terms = []
-    terms.extend(map(itemgetter('name'), package.get('tags', [])))
+    terms.extend(list(map(itemgetter('name'), package.get('tags', []))))
     package['harvest_dataset_terms'] = terms
 
     return package
