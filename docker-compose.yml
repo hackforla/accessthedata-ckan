@@ -29,6 +29,10 @@ services:
     container_name: db
     env_file:
       - .dev.env
+    image: postgres:12
+    environment:
+      PGDATA: /var/lib/postgresql/data/access_data/
+    restart: always
     build:
       context: postgresql/
     volumes:
