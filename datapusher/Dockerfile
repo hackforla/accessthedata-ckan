@@ -50,7 +50,7 @@ RUN pip wheel --wheel-dir=/wheels -r ${REQUIREMENTS_URL}
 RUN curl -o /wheels/requirements.txt ${REQUIREMENTS_URL}
 
 # Get uwsgi and gevent from pip
-RUN pip wheel --wheel-dir=/wheels uwsgi==2.0.19.1 gevent==20.6.2 greenlet==0.4.16
+RUN pip wheel --wheel-dir=/wheels uwsgi==2.0.19.1 gevent greenlet
 
 
 ############
@@ -80,7 +80,7 @@ RUN curl -o /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py && \
 COPY --from=build /wheels /srv/app/wheels
 
 # Install uwsgi and gevent
-RUN pip install --no-index --find-links=/srv/app/wheels uwsgi==2.0.19.1 gevent==20.6.2
+RUN pip install --no-index --find-links=/srv/app/wheels uwsgi==2.0.19.1 gevent
 
 # Create a local user and group to run the app
 RUN addgroup -g 92 -S ckan && \
@@ -99,8 +99,8 @@ RUN rm -rf /srv/app/wheels
 
 COPY setup ${APP_DIR}
 
-EXPOSE 8000
+EXPOSE 8800
 
 USER ckan
 
-CMD ["uwsgi", "--socket=/tmp/uwsgi.sock", "--uid=92", "--gid=92", "--http=:8000", "--master", "--enable-threads", "--gevent=2000", "-p 2", "-L", "--wsgi-file=wsgi.py"]
+CMD ["uwsgi", "--socket=/tmp/uwsgi.sock", "--uid=92", "--gid=92", "--http=:8800", "--master", "--enable-threads", "--gevent=2000", "-p 2", "-L", "--wsgi-file=wsgi.py"]

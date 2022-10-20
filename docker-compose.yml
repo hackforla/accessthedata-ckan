@@ -2,28 +2,20 @@ version: "3"
 
 services:
   ckan:
+    container_name: datapusher
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: datapusher/
     env_file:
       - .dev.env
     links:
       - db
       - solr
       - redis
-      - datapusher
     ports:
-      - "0.0.0.0:5000:5000"
+      - "0.0.0.0:3000:3000"
     volumes:
       - .:/srv/app/src_extensions
       - ckan_storage:/var/lib/ckan
-
-  datapusher:
-    container_name: datapusher
-    build:
-      context: datapusher/
-    ports:
-      - "8800:8800"
 
   db:
     container_name: db
