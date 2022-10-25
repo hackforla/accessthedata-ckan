@@ -10,9 +10,13 @@ from ckanext.lacounts.model import tables_exist
 from ckanext.lacounts import helpers, validators, jobs
 from ckanext.lacounts.logic import actions, auth
 
+
 log = logging.getLogger(__name__)
 _ = toolkit._
 
+def hello_plugin():
+    u'''A simple view function'''
+    return u'Hello World, this is served from an extension'
 
 class LacountsPlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer)

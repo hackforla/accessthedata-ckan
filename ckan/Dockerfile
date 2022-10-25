@@ -40,7 +40,7 @@ RUN echo 'Installing extensions' && \
     pip install -e git+https://github.com/okfn/ckanext-contact.git@lacounts-0.1#egg=ckanext-contact
 
 FROM ubuntu:20.04
-COPY . /srv/app/src/ckanext-lacountsx
+COPY ckanext /srv/app/src/ckanext-lacounts
 
 RUN apk add bind-tools
 RUN dig pypi.org

@@ -2,9 +2,7 @@ version: "3"
 
 services:
   ckan:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ckan/ckan
     env_file:
       - .dev.env
     links:
@@ -13,9 +11,9 @@ services:
       - redis
       - datapusher
     ports:
-      - "0.0.0.0:3000:3000"
+      - "0.0.0.0:5000:5000"
     volumes:
-      - .:/srv/app/src_extensions
+      - ./ckanext:/srv/app/src_extensions
       - ckan_storage:/var/lib/ckan
 
   datapusher:
@@ -42,6 +40,8 @@ services:
     container_name: solr
     build:
       context: solr/
+    ports:
+      - "8983:8983"
 
   redis:
     container_name: redis
