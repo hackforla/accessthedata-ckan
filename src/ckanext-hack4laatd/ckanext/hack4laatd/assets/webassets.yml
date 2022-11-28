@@ -1,0 +1,18 @@
+accessthedata-js:
+  filter: rjsmin
+  output: accessthedata/%(version)s_accessthedata.js
+  contents:
+    - theme.js
+    - home.js
+    - editable.js
+    - bubblechart.js
+  extra:
+    preload:
+      - base/main
+
+accessthedata-css:
+  filter: cssrewrite
+  output: accessthedata/%(version)s_accessthedata.css
+  contents:
+    - theme.css
+    - editable.css
