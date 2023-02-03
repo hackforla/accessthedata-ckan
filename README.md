@@ -156,7 +156,7 @@ COPY docker-entrypoint.d/* /docker-entrypoint.d/
 
 ### Applying patches
 
-When building your project specific CKAN images (the ones defined in the `ckan/` folder), you can apply patches
+When building your project specific CKAN images (the ones defined in the `ckan/` folder), you can apply patches 
 to CKAN core or any of the built extensions. To do so create a folder inside `ckan/patches` with the name of the
 package to patch (ie `ckan` or `ckanext-??`). Inside you can place patch files that will be applied when building
 the images. The patches will be applied in alphabetical order, so you can prefix them sequentially if necessary.

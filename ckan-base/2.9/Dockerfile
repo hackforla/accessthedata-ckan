@@ -45,7 +45,7 @@ RUN apk add --no-cache tzdata \
         g++ \
         autoconf \
         automake \
-        libtool \
+    	libtool \
         python3-dev \
         libxml2-dev \
         libxslt-dev \
