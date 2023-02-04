@@ -308,7 +308,7 @@ let
       ckantoolkit
     ];
 
-    src = ./.;
+    src = ./src/ckanext-hack4laatd;
 
     doCheck = false;
   };
@@ -320,5 +320,6 @@ in
 
       nose
       setuptools
+      pkgs.amazon-ecs-cli
     ];
   }
