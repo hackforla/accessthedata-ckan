@@ -2,6 +2,7 @@ version: "3"
 
 services:
   ckan-dev:
+    image: 692347508265.dkr.ecr.us-west-2.amazonaws.com/atd-ckan
     build:
       context: ckan/
       dockerfile: Dockerfile.dev
@@ -9,20 +10,21 @@ services:
         - TZ=${TZ}
     env_file:
       - .env
-    platform: linux/amd64
-    links:
-      - db
-      - solr
-      - redis
-      - datapusher
+        #platform: linux/amd64
+#    links:
+#      - db
+#      - solr
+#      - redis
+#      - datapusher
     ports:
       - "0.0.0.0:${CKAN_PORT}:5000"
     volumes:
-      - ./src:/srv/app/src_extensions
+      #- ./src:/srv/app/src_extensions
       - ckan_storage:/var/lib/ckan
 
   datapusher:
     container_name: datapusher
+    image: 692347508265.dkr.ecr.us-west-2.amazonaws.com/atd-datapusher
     build:
       context: datapusher/
     ports:
@@ -32,6 +34,7 @@ services:
     container_name: db
     env_file:
       - .env
+    image: 692347508265.dkr.ecr.us-west-2.amazonaws.com/atd-db
     build:
       context: postgresql/
     environment:

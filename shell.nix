@@ -321,5 +321,6 @@ in
       nose
       setuptools
       pkgs.amazon-ecs-cli
+      pkgs.awscli2
     ];
   }
