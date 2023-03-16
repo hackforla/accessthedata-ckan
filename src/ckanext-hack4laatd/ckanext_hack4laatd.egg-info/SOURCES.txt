@@ -126,7 +126,10 @@ ckanext/hack4laatd/src/js/main.js
 ckanext/hack4laatd/templates/base.html
 ckanext/hack4laatd/templates/custom_footer.html
 ckanext/hack4laatd/templates/custom_header.html
+ckanext/hack4laatd/templates/custom_page.html
 ckanext/hack4laatd/templates/page.html
+ckanext/hack4laatd/templates/blog/read.html
+ckanext/hack4laatd/templates/blog/search.html
 ckanext/hack4laatd/templates/contact/form.html
 ckanext/hack4laatd/templates/contact/success.html
 ckanext/hack4laatd/templates/contact/snippets/form.html
