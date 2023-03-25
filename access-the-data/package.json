@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "tailwind": "tailwindcss",
     "start": "next start",
     "test": "jest",
     "test:watch": "jest --watch",

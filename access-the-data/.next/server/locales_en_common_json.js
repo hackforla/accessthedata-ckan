@@ -17,7 +17,7 @@ exports.modules = {
   \********************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"title":"Portal in English","description":"At Datahub, we have over thousands of datasets for free and a Premium Data Service for additional or customised data with guaranteed updates."}');
+module.exports = JSON.parse('{"title":"Portal in English","description":"At Access The Data, we have over five datasets for free and a Premium Data Service for additional or customised data with guaranteed updates."}');
 
 /***/ })
 

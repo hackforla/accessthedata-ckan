@@ -4,5 +4,11 @@
     "files": [
       "static/chunks/node_modules_next_dist_client_dev_noop_js.js"
     ]
+  },
+  "../node_modules/portal/dist/index.esm.js -> plotly.js-basic-dist": {
+    "id": "./node_modules/plotly.js-basic-dist/plotly-basic.js",
+    "files": [
+      "static/chunks/node_modules_plotly_js-basic-dist_plotly-basic_js.js"
+    ]
   }
 }

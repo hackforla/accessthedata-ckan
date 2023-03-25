@@ -28,7 +28,7 @@ const Stats: React.FC = () => {
   ];
 
   return (
-    <div className="p-4">
+    <div className="p-4 bg-secondary-beige">
       <h3 className="text-lg leading-6 font-medium text-gray-900">
         DataHub Stats
       </h3>
@@ -36,12 +36,12 @@ const Stats: React.FC = () => {
         {stats.map((item) => (
           <div
             key={item.name}
-            className="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6"
+            className="px-4 py-5 bg-primary-cyan shadow rounded-lg overflow-hidden sm:p-6"
           >
-            <dt className="text-sm font-medium text-gray-500 truncate">
+            <dt className="text-sm font-medium text-white truncate">
               {item.name}
             </dt>
-            <dd className="mt-1 text-3xl font-semibold text-gray-900">
+            <dd className="mt-1 text-3xl font-semibold text-secondary-lemon">
               {item.stat}
             </dd>
           </div>

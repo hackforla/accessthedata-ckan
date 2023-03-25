@@ -17,7 +17,7 @@ const NavBar: React.FC<{ menu: any; logo: string }> = ({ menu, logo }) => {
   };
 
   return (
-    <Disclosure as="nav" className="bg-white shadow">
+    <Disclosure as="nav" className="bg-primary-cyan shadow">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
@@ -43,7 +43,7 @@ const NavBar: React.FC<{ menu: any; logo: string }> = ({ menu, logo }) => {
                     <a
                       key={'menu-link' + index}
                       href={item.path}
-                      className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                      className="border-transparent text-white hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                     >
                       {item.title}
                     </a>

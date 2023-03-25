@@ -50,6 +50,7 @@ RUN echo "installing plugins" && \
 # runtime mounted ones)
 # See https://github.com/okfn/docker-ckan#applying-patches
 COPY patches ${APP_DIR}/patches
+COPY docker-entrypoint.d /docker-entrypoint.d/
 
 RUN for d in $APP_DIR/patches/*; do \
         if [ -d $d ]; then \

@@ -7,7 +7,7 @@ in
     buildInputs = with pkgs; [
       python39
       yarn
-      bore
+      bore-cli
     ];
     DMS="http://localhost:5000";
   }
