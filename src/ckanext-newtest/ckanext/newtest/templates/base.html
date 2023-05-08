@@ -1,0 +1,10 @@
+{% ckan_extends %}
+
+{% block styles %}
+  {{ super() }}
+
+  {% asset 'newtest/newtest-css2' %}
+
+{% endblock %}
+
+{% block title %}My Subtitle - {{ super() }}{% endblock %}
