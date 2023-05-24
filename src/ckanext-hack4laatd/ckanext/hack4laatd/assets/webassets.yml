@@ -11,8 +11,7 @@ accessthedata-js:
       - base/main
 
 accessthedata-css:
-  filter: cssrewrite
   output: accessthedata/%(version)s_accessthedata.css
   contents:
-    - theme.css
+    - theme2.css
     - editable.css
