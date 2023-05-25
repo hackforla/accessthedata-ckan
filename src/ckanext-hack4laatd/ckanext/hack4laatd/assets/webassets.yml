@@ -13,5 +13,5 @@ accessthedata-js:
 accessthedata-css:
   output: accessthedata/%(version)s_accessthedata.css
   contents:
-    - theme2.css
+    - theme.css
     - editable.css
