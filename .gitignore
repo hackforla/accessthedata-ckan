@@ -1,9 +1,38 @@
-.pyc
-.pyo
+# See project-specific .gitignore files in the CKAN extensions under src/
+# and in the PortalJS project in access-the-data/
 
+# 1. From https://github.com/ckan/ckan-docker/blob/master/.gitignore
+
+# generic
 .DS_Store
-.DS_Store?
+.vagrant
+
+# code & config
+_service-provider/*
+_solr/schema.xml
+_src/*
+local/*
+
+# 2. Hoisted from PortalJS .gitignore
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/
+
+# 3. Common to CKAN extension and PortalJS
+node_modules
+
+# 4. Legacy project .gitignore
+.DS_Store
 ._*
 .Spotlight-V100
 .Trashes
-access-the-data/.next/
+
+# Compiled CSS
+src/ckanext-hack4laatd/ckanext/hack4laatd/assets/theme.css
