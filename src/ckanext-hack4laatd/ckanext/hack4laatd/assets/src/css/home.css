@@ -55,9 +55,9 @@
   & .hero {
     padding-top: var(--header-height-small);
     background-image: none;
-    background-color: var(--grey);
+    background-color: var(--light-background);
     position: relative;
-    color: #fff;
+    color: var(--dark-blue);
     font-size: 1.15em;
     padding-bottom: var(--spacer-25);
     min-height: 100vh;
@@ -103,7 +103,6 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: linear-gradient(to bottom, var(--grey) 0%, color(var(--grey) a(0%)) 100%);
       }
 
       & img {
@@ -214,7 +213,7 @@
 }
 
 section.community {
-  background-color: var(--orange);
+  background-color: var(--terra-cotta);
   color: #fff;
   margin-bottom: 0;
   padding-top: var(--spacer-50);

@@ -10,7 +10,12 @@ html {
   }
 }
 
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .dataset-heading {
   font-size: 1rem;
   color: var(--heading-colour);
@@ -45,7 +50,7 @@ h1 {
   display: inline-block;
   margin-bottom: 0.5em;
   padding-bottom: 0.1em;
-  border-bottom: solid 0.15em var(--yellow);
+  /* border-bottom: solid 0.15em var(--yellow); */
 
   & a:hover,
   & a:focus {
@@ -107,6 +112,7 @@ h5 {
   font-size: 14px;
   border-radius: 0;
 }
+
 .label-default {
   background-color: var(--grey);
 }
@@ -151,6 +157,7 @@ p.has-pull-quote {
 }
 
 .notes {
+
   & ul,
   & ol {
     list-style-position: outside;

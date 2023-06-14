@@ -46,7 +46,10 @@
   --link-colour: var(--terra-cotta);
   --visited-link-colour: var(--link-colour);
   --heading-link-colour: var(--light-background);
-  --input-focus-colour: var(--sunny);
+  --input-focus-colour: var(--cyan-blue);
+  --footer-colour: var(--cyan-blue);
+  --footer-link-colour: var(--light-background);
+
 
   /* Other */
   --education-colour: var(--orange);

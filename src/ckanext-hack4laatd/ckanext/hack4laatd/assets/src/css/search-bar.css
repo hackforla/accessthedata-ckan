@@ -11,7 +11,7 @@
     transition: border-color ease-in-out .15s;
 
     &::placeholder {
-      color: color(var(--grey) a(35%));
+      color: color(var(--dark-blue) a(35%));
       opacity: 1;
     }
 
@@ -19,7 +19,7 @@
       outline: none;
       border-color: var(--input-focus-colour);
 
-      & + button {
+      &+button {
         background-color: var(--blue);
         border-radius: 50%;
 
@@ -73,7 +73,7 @@
       font-weight: 700;
 
       &::placeholder {
-        color: color(var(--grey) a(70%));
+        color: color(var(--dark-blue) a(70%));
         opacity: 1;
       }
 
