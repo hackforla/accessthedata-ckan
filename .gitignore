@@ -34,3 +34,5 @@ node_modules
 .Spotlight-V100
 .Trashes
 
+# Compiled CSS
+src/ckanext-hack4laatd/ckanext/hack4laatd/assets/theme.css
