@@ -17,15 +17,14 @@ body {
 [role="main"],
 .main {
   padding: 0;
-  min-height:0;
+  min-height: 0;
+  background-color: var(--body-bg);
 }
 
 [role="main"] {
-  background-color: var(--body-bg);
+  &>.container {
 
-  & > .container {
-
-    & > .wrapper {
+    &>.wrapper {
       margin-bottom: 0;
     }
   }
@@ -48,7 +47,12 @@ textarea {
   font-family: var(--font-family-base);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--heading-colour);
 }
 
