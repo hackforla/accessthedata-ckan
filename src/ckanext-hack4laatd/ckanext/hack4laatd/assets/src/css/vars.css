@@ -21,8 +21,8 @@
   --info-colour: var(--orange);
   --danger-colour: #db463f;
   --border-colour: #dedfdf;
-  --shadow: 0px 0 2px 0px rgba(0,0,0,0.25);
-  --drop-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+  --shadow: 0px 0 2px 0px rgba(0, 0, 0, 0.25);
+  --drop-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
 
   --education-colour: var(--orange);
   --environment-colour: var(--green);
@@ -31,7 +31,7 @@
   --transportation-colour: var(--yellow-orange);
   --well-being-colour: var(--blue);
 
-  --font-family-base: 'Lato', sans-serif;
+  --font-family-base: 'Sora', sans-serif;
 
   --user-bar-height: 38px;
   --header-height-small: 76px;
@@ -50,9 +50,38 @@
   --spacer-50: 2.4rem;
   --spacer-75: 3.8rem;
 
-  --font-size-xsmall: 11px;
-  --font-size-small: 16px;
-  --font-size-medium: 18px;
+  --font-size-p1: 1.25rem;
+  --font-size-p2: 1.125rem;
+  --font-size-p3: 1rem;
+
+  --font-size-h1-desktop: 3rem;
+  --font-size-h2-desktop: 2.25rem;
+  --font-size-h3-desktop: 1.75rem;
+  --font-size-h4-desktop: 1.5rem;
+  --font-size-h5-desktop: 1.25rem;
+  --font-size-h6-desktop: 1.125rem;
+
+  --font-size-h1-mobile: 2rem;
+  --font-size-h2-mobile: 1.75rem;
+  --font-size-h3-mobile: 1.5rem;
+  --font-size-h4-mobile: 1.25rem;
+  --font-size-h5-mobile: 1.75rem;
+  --font-size-h6-mobile: 1.125rem;
+
+  --font-size-footer-1-desktop: 1rem;
+  --font-size-footer-2-desktop: .75rem;
+
+  --font-size-footer-1-mobile: 1.125rem;
+  --font-size-footer-2-mobile: .75rem;
+
+  /* Legacy type variables. Not sure exactly how to translate them. */
+
+  --font-size-xsmall: .75rem;
+  --font-size-small: 1rem;
+  --font-size-medium: 1.25rem;
+
+
+
 
   --format-icon-width: 30px;
   --format-icon-height: 33px;
