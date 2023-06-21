@@ -7,7 +7,7 @@
 
 .account-masthead {
   z-index: 9997;
-  background-color: #000;
+  background-color: var(--heading-colour);
 
   @nest .not-logged-in & {
     display: none;
@@ -16,7 +16,7 @@
   & .account {
     float: none;
 
-    & > ul {
+    &>ul {
       height: var(--user-bar-height);
       display: flex;
       align-items: center;
@@ -29,13 +29,13 @@
         }
 
         & a {
-          color: color(#fff a(90%));
+          color: var(--heading-link-colour);
           display: flex;
           align-items: center;
 
           &:hover {
             background-color: transparent;
-            color: #fff;
+            /* color: var(--body-bg); */
           }
 
           @media (--small-up) {
@@ -66,7 +66,7 @@
 .masthead {
   z-index: 9996;
   padding: 0;
-  background-color: var(--grey);
+  background-color: var(--heading-colour);
 
   @nest .logged-in & {
     top: var(--user-bar-height);
@@ -83,17 +83,19 @@
     @media (--medium-up) {
       height: var(--header-height-medium);
     }
+
     @media (--large-up) {
       height: var(--header-height-large);
     }
   }
 
   /*&.affix {*/
-    & .container {
-      @media (--large-up) {
-        height: var(--header-height-medium);
-      }
+  & .container {
+    @media (--large-up) {
+      height: var(--header-height-medium);
     }
+  }
+
   /*}*/
 
   & .navbar-right {
@@ -111,7 +113,7 @@
     margin: 0;
 
     &.collapsed {
-      color: var(--yellow);
+      color: var(--sunny);
     }
   }
 
@@ -122,7 +124,7 @@
     background-color: color(var(--grey) shade(20%));
     width: 100%;
     padding: 0;
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
 
     @media (--small-up) {
       box-shadow: none;
@@ -130,11 +132,11 @@
       width: auto;
       margin-left: auto;
       background-color: inherit;
-      display: flex!important;
+      display: flex !important;
       align-items: center;
     }
 
-    & .nav-pills > li {
+    & .nav-pills>li {
       margin-left: 0;
 
       @media (--small-only) {
@@ -167,20 +169,20 @@
       }
 
       &.active a {
-        background-color: var(--yellow);
+        background-color: var(--sunny);
         color: color(var(--grey) shade(20%));
 
         @media (--small-up) {
           background-color: transparent;
           color: inherit;
-          border-bottom-color: var(--yellow);
+          border-bottom-color: var(--sunny);
           border-radius: 0;
         }
       }
 
       &:last-child {
-        & > a {
-          border-color: var(--yellow);
+        &>a {
+          border-color: var(--sunny);
           border-width: 0.15em;
 
           @media (--small-up) {
@@ -191,9 +193,9 @@
           }
         }
 
-        &:not(.active){
-          & > a {
-            background-color: var(--yellow);
+        &:not(.active) {
+          &>a {
+            background-color: var(--sunny);
             color: var(--grey);
 
             &:hover {
@@ -232,8 +234,8 @@
         &:focus {
           background-color: color(#000 a(20%));
 
-          & + .btn-search {
-            color: var(--yellow);
+          &+.btn-search {
+            color: var(--sunny);
           }
         }
       }
@@ -254,39 +256,40 @@
           &:focus {
             background-color: #fff;
 
-            & + .btn-search {
+            &+.btn-search {
               color: var(--blue);
             }
           }
         }
 
         /*@nest .js & {*/
-          & input[type="text"],
-          & input[type="search"],
-          & .btn-search {
-            position: absolute;
-            left: -200vw;
-          }
+        & input[type="text"],
+        & input[type="search"],
+        & .btn-search {
+          position: absolute;
+          left: -200vw;
+        }
 
-          & label {
-            display: flex;
-            align-items: center;
-            width: 2.1em;
-            overflow: hidden;
-            font-size: 0.9em;
-            margin: 0;
-            margin-left: 0.2em;
-            outline: none;
+        & label {
+          display: flex;
+          align-items: center;
+          width: 2.1em;
+          overflow: hidden;
+          font-size: 0.9em;
+          margin: 0;
+          margin-left: 0.2em;
+          outline: none;
 
-            &::before {
-              @mixin icon;
-              @mixin icon-search;
-              font-size: 1.4em;
-              margin-left: 0.5em;
-              margin-right: 2em;
-              margin-top: 0.1em;
-            }
+          &::before {
+            @mixin icon;
+            @mixin icon-search;
+            font-size: 1.4em;
+            margin-left: 0.5em;
+            margin-right: 2em;
+            margin-top: 0.1em;
           }
+        }
+
         /*}*/
 
         /* search modal */
@@ -365,6 +368,7 @@
             }
           }
         }
+
         @nest .page.active-search.logged-in & {
           & .close {
             margin-top: var(--user-bar-height);

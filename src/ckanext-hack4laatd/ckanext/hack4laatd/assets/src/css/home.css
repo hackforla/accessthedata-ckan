@@ -33,6 +33,7 @@
         @media (--medium-up) {
           padding-top: calc(var(--user-bar-height) + var(--header-height-medium));
         }
+
         @media (--large-up) {
           padding-top: calc(var(--user-bar-height) + var(--header-height-large));
         }
@@ -42,11 +43,11 @@
 
   & .masthead {
     &.affix-top {
-      background-color: color(var(--grey) a(0%));
+      /* background-color: color(var(--grey) a(0%)); */
       transition: background-color 1s;
     }
 
-    & + .site-search {
+    &+.site-search {
       display: none;
     }
   }
@@ -54,9 +55,9 @@
   & .hero {
     padding-top: var(--header-height-small);
     background-image: none;
-    background-color: var(--grey);
+    background-color: var(--light-background);
     position: relative;
-    color: #fff;
+    color: var(--dark-blue);
     font-size: 1.15em;
     padding-bottom: var(--spacer-25);
     min-height: 100vh;
@@ -71,6 +72,7 @@
     @media (--medium-up) {
       padding-top: var(--header-height-medium);
     }
+
     @media (--large-up) {
       padding-top: var(--header-height-large);
     }
@@ -101,7 +103,6 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: linear-gradient(to bottom, var(--grey) 0%, color(var(--grey) a(0%)) 100%);
       }
 
       & img {
@@ -135,23 +136,26 @@
 
   & .search-form {
     margin-bottom: var(--spacer-15);
+
     & input::placeholder {
       font-size: 70%;
+
       @media (--small-up) {
         font-size: 75%;
       }
+
       @media (--medium-up) {
         font-size: 80%;
       }
     }
   }
 
-  & .homepage > .container > section {
+  & .homepage>.container>section {
     margin-bottom: var(--spacer-50);
     margin-top: var(--spacer-25);
     position: relative;
 
-    & > .explore-link {
+    &>.explore-link {
       font-size: 1.1em;
       font-weight: 900;
       color: var(--grey);
@@ -189,9 +193,11 @@
 
       & .explore-link {
         top: 2.2rem;
+
         &::after {
           color: var(--yellow);
         }
+
         &:hover {
           &::after {
             box-shadow: 0 0.1em 0 var(--yellow);
@@ -207,7 +213,7 @@
 }
 
 section.community {
-  background-color: var(--orange);
+  background-color: var(--terra-cotta);
   color: #fff;
   margin-bottom: 0;
   padding-top: var(--spacer-50);
@@ -220,13 +226,14 @@ section.community {
 
   & a {
     color: inherit;
+
     &:hover span {
       text-decoration: underline;
     }
   }
 
   & .container {
-    & > a {
+    &>a {
       display: inline-flex;
       align-items: center;
       text-decoration: none;
@@ -243,7 +250,7 @@ section.community {
     @media (--small-up) {
       display: flex;
 
-      & > div {
+      &>div {
         margin-right: auto;
 
         & :last-child {
@@ -251,7 +258,7 @@ section.community {
         }
       }
 
-      & > a {
+      &>a {
         margin-right: 0;
         margin-top: 0;
         margin-left: var(--spacer-25);
@@ -320,7 +327,7 @@ section.community {
           color: inherit;
         }
 
-        & > * {
+        &>* {
           margin-top: 0;
           margin-bottom: 0;
 
@@ -337,6 +344,7 @@ section.community {
 
         &.show-as-collapsed {
           align-items: center;
+
           & .toggle {
             &:after {
               transform: rotate(0deg);
@@ -349,10 +357,12 @@ section.community {
         & :last-child {
           margin-bottom: calc(var(--spacer-25) / 2);
         }
+
         & h3 {
           color: #fff;
           margin-top: 0;
         }
+
         & a.explore-link {
           color: white;
           font-weight: bold;
@@ -379,6 +389,7 @@ section.community {
     & .header {
       margin-top: 1rem;
       margin-right: 1rem;
+
       &::after {
         margin-left: -0.5em;
       }
@@ -407,7 +418,7 @@ section.community {
         }
 
         & .caption-header {
-          & > * {
+          &>* {
             color: inherit;
 
             & small {
@@ -424,6 +435,7 @@ section.community {
           &::after {
             color: var(--yellow);
           }
+
           &:hover {
             &::after {
               box-shadow: 0 0.1em 0 var(--yellow);
@@ -469,28 +481,40 @@ section.community {
     padding: var(--spacer-15);
 
     &.education {
-      @mixin btn-box-col var(--education-colour), #fff, #fff;
+      @mixin btn-box-col var(--education-colour),
+      #fff,
+      #fff;
     }
 
     &.environment {
-      @mixin btn-box-col var(--environment-colour), #fff, #fff;
+      @mixin btn-box-col var(--environment-colour),
+      #fff,
+      #fff;
     }
 
     &.housing {
-      @mixin btn-box-col var(--housing-colour), #fff, #fff;
+      @mixin btn-box-col var(--housing-colour),
+      #fff,
+      #fff;
     }
 
     &.immigration {
-      @mixin btn-box-col var(--immigration-colour), #fff, #fff;
+      @mixin btn-box-col var(--immigration-colour),
+      #fff,
+      #fff;
     }
 
     &.transportation {
-      @mixin btn-box-col var(--transportation-colour), #fff, #fff;
+      @mixin btn-box-col var(--transportation-colour),
+      #fff,
+      #fff;
     }
 
     &.well-being,
     &.health {
-      @mixin btn-box-col var(--well-being-colour), #fff, #fff;
+      @mixin btn-box-col var(--well-being-colour),
+      #fff,
+      #fff;
     }
 
     &.full-link {
@@ -569,7 +593,7 @@ section.community {
     display: block;
 
     @media (--small-up) {
-      @supports ( display: grid) {
+      @supports (display: grid) {
         display: grid;
         grid-template-columns: auto auto;
         align-items: center;
@@ -592,7 +616,7 @@ section.community {
     margin-bottom: var(--spacer-15);
 
     @media (--small-up) {
-      @supports ( display: grid) {
+      @supports (display: grid) {
         margin-bottom: 0;
       }
     }
@@ -647,7 +671,7 @@ section.community {
     margin: 0;
     word-break: break-word;
 
-    & br + br {
+    & br+br {
       display: none;
     }
   }
@@ -656,7 +680,7 @@ section.community {
     font-size: 16px;
     margin-top: var(--spacer-15);
 
-    @supports ( display: grid) {
+    @supports (display: grid) {
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row-start: 1;

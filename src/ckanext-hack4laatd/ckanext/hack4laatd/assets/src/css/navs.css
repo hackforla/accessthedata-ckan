@@ -1,12 +1,12 @@
-.nav > li > a:hover,
-.nav > li > a:focus {
+.nav>li>a:hover,
+.nav>li>a:focus {
   background-color: var(--blue);
   color: var(--body-bg);
 }
 
 :target::before {
-  content:"";
-  display:block;
+  content: "";
+  display: block;
   height: calc(var(--header-height-small) + var(--search-height-small));
   margin-top: calc(0 - calc(var(--header-height-small) + var(--search-height-small)));
 
@@ -24,6 +24,7 @@
       margin-top: calc(0 - calc(var(--header-height-medium) + var(--user-bar-height) + var(--search-height-medium)));
     }
   }
+
   @media (--large-up) {
     height: calc(var(--header-height-medium) + var(--search-height-large));
     margin-top: calc(0 - calc(var(--header-height-medium) + var(--search-height-large)));
@@ -40,22 +41,27 @@
   & ul {
     list-style-type: none;
   }
+
   & li {
     margin: 1.25em 0;
     padding: 0.25em 0.5em;
-    border-left: solid 0.3em white;
+    border-left: solid 0.3em var(--weldon-blue);
+
     &:first-child {
       margin-top: 0;
     }
+
     & a {
-      color: var(--grey);
+      color: var(--dark-blue);
       text-transform: uppercase;
     }
   }
+
   & li.active {
-    border-color: var(--yellow);
+    border-color: var(--sunny);
+
     & a {
-      color: black;
+      color: var(--dark-blue);
       font-weight: bold;
     }
   }
