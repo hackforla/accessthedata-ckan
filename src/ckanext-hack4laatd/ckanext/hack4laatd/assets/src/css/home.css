@@ -43,7 +43,7 @@
 
   & .masthead {
     &.affix-top {
-      background-color: color(var(--grey) a(0%));
+      /* background-color: color(var(--grey) a(0%)); */
       transition: background-color 1s;
     }
 
@@ -55,9 +55,9 @@
   & .hero {
     padding-top: var(--header-height-small);
     background-image: none;
-    background-color: var(--grey);
+    background-color: var(--light-background);
     position: relative;
-    color: #fff;
+    color: var(--dark-blue);
     /* font-size: 1.15em; */
     padding-bottom: var(--spacer-25);
     min-height: 100vh;
@@ -72,7 +72,6 @@
     @media (--medium-up) {
       padding-top: var(--header-height-medium);
     }
-
     @media (--large-up) {
       padding-top: var(--header-height-large);
     }
@@ -103,7 +102,6 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: linear-gradient(to bottom, var(--grey) 0%, color(var(--grey) a(0%)) 100%);
       }
 
       & img {
@@ -214,7 +212,7 @@
 }
 
 section.community {
-  background-color: var(--orange);
+  background-color: var(--terra-cotta);
   color: #fff;
   margin-bottom: 0;
   padding-top: var(--spacer-50);
@@ -390,7 +388,6 @@ section.community {
     & .header {
       margin-top: 1rem;
       margin-right: 1rem;
-
       &::after {
         margin-left: -0.5em;
       }

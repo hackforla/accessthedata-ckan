@@ -23,7 +23,7 @@
 }
 
 .site-footer {
-  background-color: var(--grey);
+  background-color: var(--footer-colour);
   color: color(#fff a(90%));
   padding-top: var(--spacer-35);
   padding-bottom: 0;
