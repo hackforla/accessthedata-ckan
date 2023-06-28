@@ -184,3 +184,26 @@ p {
   font-weight: 400;
   line-height: 1.5;
 }
+
+
+@define-mixin footer-1 {
+  font-family: system-ui;
+  font-weight: 500;
+  font-size: var(--font-size-footer-1-mobile);
+
+  @media (--medium-up) {
+    font-weight: 400;
+    font-size: var(--font-size-footer-1-desktop);
+  }
+}
+
+@define-mixin footer-2 {
+  font-family: system-ui;
+  font-weight: 500;
+  font-size: var(--font-size-footer-2-mobile);
+
+  @media (--medium-up) {
+    font-weight: 400;
+    font-size: var(--font-size-footer-2-desktop);
+  }
+}
