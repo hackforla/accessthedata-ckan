@@ -58,7 +58,7 @@
     background-color: var(--light-background);
     position: relative;
     color: var(--dark-blue);
-    font-size: 1.15em;
+    /* font-size: 1.15em; */
     padding-bottom: var(--spacer-25);
     min-height: 100vh;
     display: flex;
@@ -72,7 +72,6 @@
     @media (--medium-up) {
       padding-top: var(--header-height-medium);
     }
-
     @media (--large-up) {
       padding-top: var(--header-height-large);
     }
@@ -84,8 +83,8 @@
 
     & h1 {
       color: inherit;
-      font-size: 2.6em;
-      line-height: 1;
+      /* font-size: 2.6em; */
+      /* line-height: 1; */
       padding-top: var(--spacer-25);
     }
 
@@ -156,8 +155,8 @@
     position: relative;
 
     &>.explore-link {
-      font-size: 1.1em;
-      font-weight: 900;
+      /* font-size: 1.1em;
+      font-weight: 900; */
       color: var(--grey);
       margin-top: 1rem;
 
@@ -389,7 +388,6 @@ section.community {
     & .header {
       margin-top: 1rem;
       margin-right: 1rem;
-
       &::after {
         margin-left: -0.5em;
       }
@@ -535,7 +533,7 @@ section.community {
 
   @media (--small-up) {
     grid-template-columns: 1fr 1fr;
-    font-size: 18px;
+    /* font-size: 18px; */
   }
 
   @media (--medium-up) {
@@ -571,8 +569,8 @@ section.community {
     margin-top: var(--spacer-25);
 
     & h1 {
-      font-size: 1.2em;
-      font-weight: bold;
+      /* font-size: 1.2em;
+      font-weight: bold; */
       margin-top: 0;
       border: none;
     }
@@ -638,7 +636,7 @@ section.community {
 
     & [data-scribe="element:screen_name"] {
       display: block;
-      font-size: 16px;
+      /* font-size: 16px; */
     }
 
     & [data-scribe="element:verified_badge"] {
@@ -677,7 +675,7 @@ section.community {
   }
 
   & .timePosted {
-    font-size: 16px;
+    /* font-size: 16px; */
     margin-top: var(--spacer-15);
 
     @supports (display: grid) {
