@@ -1,3 +1,104 @@
+@define-mixin h1-font {
+  font-size: var(--font-size-h1-mobile);
+  font-weight: 700;
+  line-height: 1.5;
+
+  @media (--medium-up) {
+    font-size: var(--font-size-h1-desktop);
+  }
+}
+
+@define-mixin h2-font {
+  font-size: var(--font-size-h2-mobile);
+  font-weight: 700;
+  line-height: 1.5;
+
+  @media (--medium-up) {
+    font-size: var(--font-size-h2-desktop);
+  }
+}
+
+@define-mixin h3-font {
+  font-size: var(--font-size-h3-mobile);
+  font-weight: 700;
+  line-height: 1.5;
+
+  @media (--medium-up) {
+    font-size: var(--font-size-h3-desktop);
+  }
+}
+
+@define-mixin h4-font {
+  font-size: var(--font-size-h4-mobile);
+  font-weight: 700;
+  line-height: 1.5;
+
+  @media (--medium-up) {
+    font-size: var(--font-size-h4-desktop);
+  }
+}
+
+@define-mixin h5-font {
+  font-size: var(--font-size-h5-mobile);
+  font-weight: 700;
+  line-height: 1.5;
+
+  @media (--medium-up) {
+    font-size: var(--font-size-h5-desktop);
+  }
+}
+
+@define-mixin h6-font {
+  font-size: var(--font-size-h6-mobile);
+  font-weight: 700;
+  line-height: 1.5;
+
+  @media (--medium-up) {
+    font-size: var(--font-size-h6-desktop);
+  }
+}
+
+@define-mixin p1-font {
+  font-size: var(--font-size-p1);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@define-mixin p2-font {
+  font-size: var(--font-size-p2);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@define-mixin p3-font {
+  font-size: var(--font-size-p3);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@define-mixin footer-1-font {
+  font-family: system-ui;
+  font-weight: 500;
+  font-size: var(--font-size-footer-1-mobile);
+
+  @media (--medium-up) {
+    font-weight: 400;
+    font-size: var(--font-size-footer-1-desktop);
+  }
+}
+
+@define-mixin footer-2-font {
+  font-family: system-ui;
+  font-weight: 500;
+  font-size: var(--font-size-footer-2-mobile);
+
+  @media (--medium-up) {
+    font-weight: 400;
+    font-size: var(--font-size-footer-2-desktop);
+  }
+}
+
+
 html {
   font-size: 100%;
 }
@@ -32,32 +133,16 @@ h2 {
 } */
 
 h1 {
-  font-size: var(--font-size-h1-mobile);
-
-  /* display: inline-block; */
-  /* margin-bottom: 0.5em;
-  padding-bottom: 0.1em;
-  border-bottom: solid 0.15em var(--yellow); */
-  @media (--medium-up) {
-    font-size: var(--font-size-h1-desktop);
-  }
+  @mixin h1-font;
 }
 
 h2,
 body.blog article h1 {
-  font-size: var(--font-size-h2-mobile);
-
-  @media (--medium-up) {
-    font-size: var(--font-size-h2-desktop);
-  }
+  @mixin h2-font;
 }
 
 h3 {
-  font-size: var(--font-size-h3-mobile);
-
-  @media (--medium-up) {
-    font-size: var(--font-size-h3-desktop);
-  }
+  @mixin h3-font;
 }
 
 /* h3.dataset-heading {
@@ -75,27 +160,16 @@ h3 {
 } */
 
 h4 {
-  font-size: var(--font-size-h4-mobile);
-
-  @media (--medium-up) {
-    font-size: var(--font-size-h4-desktop);
-  }
+  @mixin h4-font;
 }
 
 h5 {
-  font-size: var(--font-size-h5-mobile);
-
-  @media (--medium-up) {
-    font-size: var(--font-size-h5-desktop);
-  }
+  @mixin h5-font;
 }
 
 h6 {
-  font-size: var(--font-size-h6-mobile);
+  @mixin h6-font;
 
-  @media (--medium-up) {
-    font-size: var(--font-size-h6-desktop);
-  }
 }
 
 .lead {
@@ -180,30 +254,5 @@ hr {
 }
 
 p {
-  font-size: var(--font-size-p1);
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-
-@define-mixin footer-1 {
-  font-family: system-ui;
-  font-weight: 500;
-  font-size: var(--font-size-footer-1-mobile);
-
-  @media (--medium-up) {
-    font-weight: 400;
-    font-size: var(--font-size-footer-1-desktop);
-  }
-}
-
-@define-mixin footer-2 {
-  font-family: system-ui;
-  font-weight: 500;
-  font-size: var(--font-size-footer-2-mobile);
-
-  @media (--medium-up) {
-    font-weight: 400;
-    font-size: var(--font-size-footer-2-desktop);
-  }
+  @mixin p1-font
 }
