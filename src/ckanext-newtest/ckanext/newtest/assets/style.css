@@ -1,8 +1,61 @@
-/*
-body {
-  border-radius: 0;
+:root {
+  --dark-blue: #2D3047;
+  --cyan-blue: #20639B;
+  --turquoise: #57C6B5;
+  --sunny: #FFFD82;
+  --weldon-blue: #7097A8;
+  --columbia-blue: #CBE7DF;
+  --lemon-meringue: #F5EABD;
+  --light-salmon: #FE9B71;
+  --beige: #F7F0DD;
+  --terra-cotta: #ED695F;
+  --light-background: #FDFBF5;
+
+  --primary-colour: var(--dark-blue);
+  --secondary-colour: var(--terra-cotta);
+  --body-bg: var(--light-background);
+  --body-colour: var(--dark-blue);
+  --heading-colour: var(--cyan-blue);
+  --link-colour: var(--terra-cotta);
+  --visited-link-colour: var(--link-colour);
+  --heading-link-colour: var(--light-background);
+  --input-focus-colour: var(--cyan-blue);
+  --footer-colour: var(--cyan-blue);
+  --footer-link-colour: var(--light-background);
 }
-*/
+
+
+.masthead,
+.account-masthead {
+  background-color: var(--light-background);
+  background-image: none;
+}
+
+.masthead .main-navbar ul li a,
+.account-masthead .account ul li a {
+  color: var(--dark-blue);
+}
+
+.masthead .main-navbar ul li:hover a,
+.masthead .main-navbar ul li:focus a,
+.masthead .main-navbar ul li.active a {
+  background-color: var(--light-background);
+}
+
+
 .masthead {
-  background-color: rgb(35, 192, 56);
+  background-color: var(--light-background);
+}
+
+.navbar {
+  flex-direction: column;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  width: 100%;
+}
+
+.masthead .main-navbar ul {
+  width: 100%;
+  justify-content: space-around;
 }
