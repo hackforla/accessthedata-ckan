@@ -11,20 +11,161 @@
   --terra-cotta: #ED695F;
   --light-background: #FDFBF5;
 
-  --primary-colour: var(--dark-blue);
-  --secondary-colour: var(--terra-cotta);
+  --primary-color: var(--dark-blue);
+  --secondary-color: var(--terra-cotta);
   --body-bg: var(--light-background);
-  --body-colour: var(--dark-blue);
-  --heading-colour: var(--cyan-blue);
-  --link-colour: var(--terra-cotta);
-  --visited-link-colour: var(--link-colour);
-  --heading-link-colour: var(--light-background);
-  --input-focus-colour: var(--cyan-blue);
-  --footer-colour: var(--cyan-blue);
-  --footer-link-colour: var(--light-background);
+  --body-color: var(--dark-blue);
+  --heading-color: var(--cyan-blue);
+  --link-color: var(--terra-cotta);
+  --visited-link-color: var(--link-color);
+  --heading-link-color: var(--light-background);
+  --input-focus-color: var(--cyan-blue);
+  --footer-color: var(--cyan-blue);
+  --footer-link-color: var(--light-background);
+
+  --font-family-base: 'Sora', sans-serif;
+
+  --user-bar-height: 38px;
+  --header-height-small: 76px;
+  --header-height-medium: 100px;
+  --header-height-large: 126px;
+
+  --search-height-small: 68px;
+  --search-height-medium: 76px;
+  --search-height-large: 86px;
+
+  --container-padding: 2.5rem;
+  --border-radius: 3px;
+  --spacer-15: 0.8rem;
+  --spacer-25: 1.2rem;
+  --spacer-35: 1.6rem;
+  --spacer-50: 2.4rem;
+  --spacer-75: 3.8rem;
+
+  --font-size-p1: 1.25rem;
+  --font-size-p2: 1.125rem;
+  --font-size-p3: 1rem;
+
+  --font-size-h1-desktop: 3rem;
+  --font-size-h2-desktop: 2.25rem;
+  --font-size-h3-desktop: 1.75rem;
+  --font-size-h4-desktop: 1.5rem;
+  --font-size-h5-desktop: 1.25rem;
+  --font-size-h6-desktop: 1.125rem;
+
+  --font-size-h1-mobile: 2rem;
+  --font-size-h2-mobile: 1.75rem;
+  --font-size-h3-mobile: 1.5rem;
+  --font-size-h4-mobile: 1.25rem;
+  --font-size-h5-mobile: 1.75rem;
+  --font-size-h6-mobile: 1.125rem;
+
+  --font-size-footer-1-desktop: 1rem;
+  --font-size-footer-2-desktop: .75rem;
+
+  --font-size-footer-1-mobile: 1.125rem;
+  --font-size-footer-2-mobile: .75rem;
+}
+
+/* Define local system fonts */
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNS-Light"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 300;
+  src: local(".SFNS-LightItalic"), local(".SFNSText-LightItalic"), local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"), local("Segoe UI Light Italic"), local("Ubuntu Light Italic"), local("Roboto-LightItalic"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 400;
+  src: local(".SFNS-Regular"), local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 400;
+  src: local(".SFNS-Italic"), local(".SFNSText-Italic"), local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"), local("Segoe UI Italic"), local("Ubuntu Italic"), local("Roboto-Italic"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 500;
+  src: local(".SFNS-Medium"), local(".SFNSText-Medium"), local(".HelveticaNeueDeskInterface-MediumP4"), local(".LucidaGrandeUI"), local("Segoe UI Semibold"), local("Ubuntu Medium"), local("Roboto-Medium"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 500;
+  src: local(".SFNS-MediumItalic"), local(".SFNSText-MediumItalic"), local(".HelveticaNeueDeskInterface-MediumItalicP4"), local(".LucidaGrandeUI"), local("Segoe UI Semibold Italic"), local("Ubuntu Medium Italic"), local("Roboto-MediumItalic"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 700;
+  src: local(".SFNS-Bold"), local(".SFNSText-Bold"), local(".HelveticaNeueDeskInterface-Bold"), local(".LucidaGrandeUI"), local("Segoe UI Bold"), local("Ubuntu Bold"), local("Roboto-Bold"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 700;
+  src: local(".SFNS-BoldItalic"), local(".SFNSText-BoldItalic"), local(".HelveticaNeueDeskInterface-BoldItalic"), local(".LucidaGrandeUI"), local("Segoe UI Bold Italic"), local("Ubuntu Bold Italic"), local("Roboto-BoldItalic"), local("DroidSans-Bold"), local("Tahoma Bold");
 }
 
 
+/* reset */
+body,
+.account-masthead,
+.masthead,
+[role="main"],
+.main,
+.site-footer {
+  background-image: none;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--body-bg);
+  color: var(--body-color);
+  font-size: 1rem;
+}
+
+[role="main"],
+.main {
+  padding: 0;
+  min-height: 0;
+  background-color: var(--body-bg);
+}
+
+[role="main"] {
+  &>.container {
+
+    &>.wrapper {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.btn-primary:hover,
+.btn-primary {
+  background-color: var(--cyan-blue);
+  border-color: var(--cyan-blue);
+}
+
+
+/* header */
 .masthead,
 .account-masthead {
   background-color: var(--light-background);
@@ -33,7 +174,7 @@
 
 .masthead .main-navbar ul li a,
 .account-masthead .account ul li a {
-  color: var(--dark-blue);
+  color: var(--cyan-blue);
 }
 
 .masthead .main-navbar ul li:hover a,
@@ -45,6 +186,7 @@
 
 .masthead {
   background-color: var(--light-background);
+  filter: drop-shadow(0, 4, 4, var(--cyan-blue))
 }
 
 .navbar {
@@ -58,4 +200,67 @@
 .masthead .main-navbar ul {
   width: 100%;
   justify-content: space-around;
+}
+
+
+/* footer */
+.site-footer {
+  background-color: var(--footer-color);
+  background-image: none;
+
+  font-family: system-ui;
+  font-weight: 500;
+  font-size: var(--font-size-footer-1-mobile);
+}
+
+.site-footer label,
+.site-footer small,
+.site-footer .small,
+.site-footer .attribution p,
+.site-footer a {
+  color: var(--footer-link-color)
+}
+
+
+/* home */
+.homepage .hero {
+  background-image: none;
+  background-color: var(--cyan-blue);
+  color: var(--light-background)
+}
+
+.homepage .search-form {
+  margin: 0;
+  padding: 0;
+  border-bottom: none
+}
+
+.homepage .search-form h3 {
+  padding: 1rem 0;
+  border-bottom: none
+}
+
+.homepage .how-it-works-header {
+  padding: 1rem 0;
+  color: var(--cyan-blue);
+}
+
+
+.homepage .how-it-works-cards {
+  padding: 1rem 0;
+  background-color: var(--lemon-meringue);
+}
+
+.homepage .how-it-works-card {
+  background-color: var(--cyan-blue);
+  color: var(--light-background);
+  border-radius: 10px;
+}
+
+/* desktop changes */
+@media (min-width: 768px) {
+  .site-footer {
+    font-weight: 400;
+    font-size: var(--font-size-footer-1-desktop);
+  }
 }

@@ -1,0 +1,52 @@
+{% ckan_extends %}
+
+{% set placeholder = _('Search datasets...') %}
+{% set dataset_type = h.default_package_type() %}
+
+{% block primary_content %}
+<div role="main">
+  <div class="main hero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 ">
+          <form class="module-content search-form" method="get" action="{% url_for dataset_type ~ '.search' %}">
+            <h3 class="heading text-center">{{ _("Access the LA County Government Data all in one place") }}</h3>
+            <h3 class="heading text-center">{{ _("Find data. Improve your community.") }}</h3>
+            <div class="search-input form-group search-giant">
+              <input
+                aria-label="{% block header_site_search_label %}{{ h.humanize_entity_type('package', dataset_type, 'search placeholder') or _('Search datasets') }}{% endblock %}"
+                id="field-main-search" type="text" class="form-control" name="q" value="" autocomplete="off"
+                placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}" />
+              <button class="btn" type="submit" aria-labelledby="search-label">
+                <i class="fa fa-search"></i>
+                <span class="sr-only" id="search-label">{{ _('Search') }}</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main how-it-works-header">
+    <div class="container ">
+      <div class="row">
+        <h3 class="heading col text-center">{{_("How It Works")}}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="main how-it-works-cards">
+    <div class="container">
+      <div class="row justify-content-around">
+        <div class="col-md-2 how-it-works-card">
+          <p class="text-center">Card to come</p>
+        </div>
+        <div class="col-md-2 how-it-works-card">
+          <p class="text-center">Card to come</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
