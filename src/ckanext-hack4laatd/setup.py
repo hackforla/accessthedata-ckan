@@ -15,6 +15,6 @@ setup(
     },
     entry_points="""
         [ckan.plugins]
-        ckanext_newtest=ckanext.newtest.plugin:NewtestPlugin
+        ckanext_hack4laatd=ckanext.hack4laatd.plugin:Hack4laatdPlugin
     """,
 )
