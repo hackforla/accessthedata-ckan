@@ -47,10 +47,10 @@ To temporary patch the CKAN configuration for the duration of a test you can use
     def test_some_action():
         pass
 """
-import ckanext.newtest.plugin as plugin
+import ckanext.hack4laatd.plugin as plugin
 
 
-@pytest.mark.ckan_config("ckan.plugins", "newtest")
+@pytest.mark.ckan_config("ckan.plugins", "hack4laatd")
 @pytest.mark.usefixtures("with_plugins")
 def test_plugin():
-    assert plugin_loaded("newtest")
+    assert plugin_loaded("hack4laatd")

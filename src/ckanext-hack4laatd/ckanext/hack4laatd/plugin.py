@@ -2,15 +2,13 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
 
-class NewtestPlugin(plugins.SingletonPlugin):
+class Hack4laatdPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
-    
+
 
     # IConfigurer
 
     def update_config(self, config_):
         toolkit.add_template_directory(config_, "templates")
         toolkit.add_public_directory(config_, "public")
-        toolkit.add_resource("assets", "newtest")
-
-    
+        toolkit.add_resource("assets", "hack4laatd")
