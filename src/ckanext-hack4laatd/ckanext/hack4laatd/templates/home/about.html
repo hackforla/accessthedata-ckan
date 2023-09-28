@@ -1,0 +1,79 @@
+{% ckan_extends %}
+
+{% block content %}
+  <div class="main about_page">
+    <div id="content">
+      <div class="about_base">
+        <div class="container">
+          {% block about %}
+            <article class="module offset-md-2 col-md-8 col-xs-12 py-5" role="main">
+              <div class="row offset-md-3 col-md-6">
+                <h1 class="page-heading text-center border-bottom">
+                  {{ _('About') }}
+                </h1>
+              </div>
+              {% block about_content %}
+                {% if g.site_about %}
+                  {{ h.render_markdown(g.site_about) }}
+                {% else %}
+                  {% snippet 'home/snippets/about_text.html' %}
+                {% endif %}
+              {% endblock %}
+            </article>
+          {% endblock %}
+        </div>
+      </div>
+      <div class="team_base">
+        <div class="container py-5">
+          {% block team %}
+            <article class="module offset-md-1 col-md-10 col-xs-12 py-5">
+              <h1 class="page-heading text-center">{{ _('Meet the Team') }}</h1>
+              <p class="text-center my-5">
+                Access the Data is developed and run by a team of volunteers
+                through Hack for LA.
+              </p>
+              <div class="d-flex flex-wrap justify-content-evenly my-5">
+                <div class="text-center">
+                  <img src="/img/clp/People of Brooklyn Avatar and Background-1.png" />
+                  <br/>Person
+                </div>
+                <div class="text-center">
+                  <img src="/img/clp/People of Brooklyn Avatar and Background-2.png" />
+                  <br/>Person
+                </div>
+                <div class="text-center">
+                  <img src="/img/clp/People of Brooklyn Avatar and Background-3.png" />
+                  <br/>Person
+                </div>
+                <div class="text-center">
+                  <img src="/img/clp/People of Brooklyn Avatar and Background-4.png" />
+                  <br/>Person
+                </div>
+                <div class="text-center">
+                  <img src="/img/clp/People of Brooklyn Avatar and Background-5.png" />
+                  <br/>Person
+                </div>
+                <div class="text-center">
+                  <img src="/img/clp/People of Brooklyn Avatar and Background-6.png" />
+                  <br/>Person
+                </div>
+              </div>
+              </article>
+          {% endblock %}
+        </div>
+      </div>
+      <div class="contact_base">
+        <div class="container py-5">
+          {% block contact %}
+            <article class="module offset-md-2 col-md-8 col-xs-12 py-5">
+              <h1 class="page-heading text-center">{{ _('Contact') }}</h1>
+              <p class="text-center my-5">
+                To come.
+              </p>
+            </article>
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
