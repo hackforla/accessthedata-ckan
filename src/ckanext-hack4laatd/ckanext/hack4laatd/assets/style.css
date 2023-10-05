@@ -164,6 +164,41 @@ body {
   border-color: var(--cyan-blue);
 }
 
+/* typography */
+h1,
+.h1 {
+  font-size: var(--font-size-h1-desktop);
+  font-weight: bold;
+}
+
+h2,
+.h2 {
+  font-size: var(--font-size-h2-desktop);
+}
+
+h3,
+.h3 {
+  font-size: var(--font-size-h3-desktop);
+}
+
+h4,
+.h4 {
+  font-size: var(--font-size-h4-desktop);
+}
+
+h5,
+.h5 {
+  font-size: var(--font-size-h5-desktop);
+}
+
+h6,
+.h6 {
+  font-size: var(--font-size-h6-desktop);
+}
+
+p {
+  font-size: var(--font-size-p2)
+}
 
 /* header */
 .masthead,
@@ -263,4 +298,20 @@ body {
     font-weight: 400;
     font-size: var(--font-size-footer-1-desktop);
   }
+}
+
+.about_page .wrapper {
+  background-color: var(--body-bg);
+  border: none;
+  box-shadow: none;
+}
+
+.about_page .about_base h1,
+.about_page .about_base h2 {
+  color: var(--cyan-blue)
+}
+
+.about_page .team_base {
+  background-color: var(--lemon-meringue);
+  color: var(--dark-blue)
 }
