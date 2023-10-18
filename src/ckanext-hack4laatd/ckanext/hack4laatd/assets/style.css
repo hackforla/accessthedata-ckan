@@ -1,5 +1,5 @@
 :root {
-  --dark-blue: #2D3047;
+  --dark-blue: 45, 48, 71;
   --cyan-blue: #20639B;
   --turquoise: #57C6B5;
   --sunny: #FFFD82;
@@ -221,7 +221,9 @@ p {
 
 .masthead {
   background-color: var(--light-background);
-  filter: drop-shadow(0, 4, 4, var(--cyan-blue))
+  box-shadow: 0 4px 4px rgba(var(--dark-blue), 0.5);
+  position: relative;
+  z-index: 1;
 }
 
 .navbar {
