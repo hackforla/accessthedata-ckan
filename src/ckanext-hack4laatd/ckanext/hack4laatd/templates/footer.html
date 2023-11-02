@@ -1,5 +1,34 @@
 {% ckan_extends %}
 
-{% block footer_attribution %}
-<p>{% trans %}Access the Data is one of the many projects at Hack for LA.{% endtrans %}</p>
+{% block footer_content %}
+<div class="row">
+  {% block footer_nav %}
+    <div class="col-md-4 footer-links">
+      <ul class="list-unstyled">
+        {% block footer_links_ckan %}
+          {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
+          <li><a href="{{ api_url }}">{{ _('CKAN API') }}</a></li>
+          <li><a href="http://www.ckan.org/">{{ _('CKAN Association') }}</a></li>
+          <li><a href="http://www.opendefinition.org/okd/"><img src="{{ h.url_for_static('/base/images/od_80x15_blue.png') }}" alt="Open Data"></a></li>
+        {% endblock %}
+      </ul>
+    </div>
+    <div class="col-md-4 footer-links">
+      <ul class="list-unstyled">
+        {% block footer_links %}
+          <li><a href="{{ h.url_for('home.about') }}">{{ _('About {0}').format(g.site_title) }}</a></li>
+          <li><a href="{{ h.url_for('dataset.search') }}">{{ _('Data Catalog') }}</a></li>
+        {% endblock %}
+      </ul>
+    {% endblock %}
+  </div>
+  <div class="col-md-4 attribution">
+    {% block footer_attribution %}
+      <p>{% trans %}Access the Data is one of the many projects at Hack for LA.{% endtrans %}</p>
+    {% endblock %}
+    {% block footer_lang %}
+      {# snippet "snippets/language_selector.html" #}
+    {% endblock %}
+  </div>
+</div>
 {% endblock %}
