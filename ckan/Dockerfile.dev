@@ -18,12 +18,12 @@ RUN if ! [ /usr/share/zoneinfo/${TZ} -ef /etc/localtime ]; then \
 #   This can be done by creating an overriding start_ckan_dev_development.sh file:
 #   (https://github.com/ckan/ckan-docker-base/blob/main/ckan-2.9/dev/setup/start_ckan_development.sh) ie: updating the 'ckan config-tool' lines
 #   For more on config-tool please see https://docs.ckan.org/en/latest/maintaining/cli.html#config-tool-tool-for-editing-options-in-a-ckan-config-file
-#   or using Crudini (https://github.com/pixelb/crudini) 
+#   or using Crudini (https://github.com/pixelb/crudini)
 #
 # For instance:
 #
 ### XLoader ###
-#RUN pip3 install -e 'git+https://github.com/ckan/ckanext-xloader.git@master#egg=ckanext-xloader' && \ 
+#RUN pip3 install -e 'git+https://github.com/ckan/ckanext-xloader.git@master#egg=ckanext-xloader' && \
 #    pip3 install -r ${APP_DIR}/src/ckanext-xloader/requirements.txt && \
 #    pip3 install -U requests[security]
 
